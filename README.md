@@ -1,7 +1,7 @@
 # exploring-maven
 Playground to explore Maven
 
-## The Resources Plugin
+## [The Resources Plugin](https://www.baeldung.com/maven-resources-plugin)
 > The resources plugin copies files from input resource directories to an output directory. This plugin has three goals, which are different only in how the resources and output directories are specified.
 
 The three goals of this plugin are:
