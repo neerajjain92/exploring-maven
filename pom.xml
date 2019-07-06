@@ -72,6 +72,15 @@
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.8.0</version>
+                    <configuration>
+                        <!--
+                        Sometimes we want to pass arguments to the javac compiler. This is where the compilerArgs parameter comes in handy.
+                            For instance, we can specify the following configuration for the compiler to warn about unchecked operations:
+                        -->
+                        <compilerArgs>
+                            <arg>-Xlint:unchecked</arg>
+                        </compilerArgs>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
