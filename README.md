@@ -55,3 +55,32 @@ The three goals of this plugin are:
   With this configuration, test cases in the DataCheck class are executed while the ones in DataTest aren’t.
 
 
+## [The Failsafe Plugin](https://www.baeldung.com/core-maven-plugins)
+> The failsafe plugin is used for integration tests of a project. It has two goals:
+  
+      integration-test – run integration tests; this goal is bound to the integration-test phase by default
+      verify – verify that the integration tests passed; this goal is bound to the verify phase by default
+
+## [The Verifier Plugin](https://www.baeldung.com/maven-verifier-plugin)
+> The verifier plugin has only one goal – verify. This goal verifies the existence or non-existence of files and directories, optionally checking file content against a regular expression.
+
+    <plugin>
+        <artifactId>maven-verifier-plugin</artifactId>
+        <version>1.1</version>
+        <configuration>
+            <verificationFile>input-resources/verifications.xml</verificationFile>
+        </configuration>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>verify</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+
+The default location of the verification file is src/test/verifier/verifications.xml. We must set a value for the verificationFile parameter if we want to use another file.
+
+    mvn verifier:verify 
+    
+    
