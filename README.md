@@ -89,4 +89,8 @@ The default location of the verification file is src/test/verifier/verifications
  
     mvn deploy
     
+## Run Maven Commands with Profile
+
+    mvn clean test -P exploring-maven
+    
     
