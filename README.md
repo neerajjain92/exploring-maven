@@ -81,6 +81,12 @@ The three goals of this plugin are:
 
 The default location of the verification file is src/test/verifier/verifications.xml. We must set a value for the verificationFile parameter if we want to use another file.
 
-    mvn verifier:verify 
+    mvn verifier:verify
+    
+    
+## [The Deploy Plugin](https://www.baeldung.com/maven-deploy-nexus)
+### Maven Deploy to Nexus
+ 
+    mvn deploy
     
     
