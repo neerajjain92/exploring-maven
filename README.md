@@ -22,7 +22,36 @@ The three goals of this plugin are:
 
 > b) testCompile – compile test source files
     
-    => mvn compile 
+    mvn compile 
     
-    => mvn test-compile
+    mvn test-compile
     
+## [The Surefire Plugin](https://www.baeldung.com/maven-surefire-plugin)
+> We can run the tests of a project using the surefire plugin. By default, this plugin generates XML reports in the directory target/surefire-reports.
+
+>This plugin has only one goal, test. This goal is bound to the test phase of the default build lifecycle, and the command mvn test will execute it.
+
+    mvn test
+    
+> The surefire plugin can work with the test frameworks JUnit and TestNG. No matter which framework we use, the behavior of surefire is the same.
+  
+>  By default, surefire automatically includes all test classes whose name starts with Test, or ends with Test, Tests or TestCase.
+  
+>  We can change this configuration using the excludes and includes parameters, however:
+  ```
+      <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.21.0</version>
+          <configuration>
+              <excludes>
+                  <exclude>DataTest.java</exclude>
+              </excludes>
+              <includes>
+                  <include>DataCheck.java</include>
+              </includes>
+          </configuration>
+      </plugin>
+  ```
+  With this configuration, test cases in the DataCheck class are executed while the ones in DataTest aren’t.
+
+
